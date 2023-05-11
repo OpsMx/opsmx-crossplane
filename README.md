@@ -1,4 +1,4 @@
-# OpsMx-crossplane
+# OpsMx-Crossplane
 # Installing Crossplane
 Create namespace.
 kubectl create namespace crossplane-system
