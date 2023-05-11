@@ -17,4 +17,4 @@ gcloud projects add-iam-policy-binding --role="$ROLE2" $PROJECT_ID --member "ser
 gcloud projects add-iam-policy-binding --role="$ROLE3" $PROJECT_ID --member "serviceAccount:$SA"
 
 # create service account keyfile
-gcloud iam service-accounts keys create creds.json --project $PROJECT_ID --iam-account $SA
+gcloud iam service-accounts keys create gcp-creds.json --project $PROJECT_ID --iam-account $SA
