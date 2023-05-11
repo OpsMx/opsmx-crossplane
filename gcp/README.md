@@ -2,9 +2,9 @@
 
 Run the script.
 
-` ./sa-gcp.sh '
-                                                                           `
-
+` ./sa-gcp.sh  `
+ 
+ `
 Note: Change the PROJECT_ID and SA_NAME according to usage
 
 # Create a Provider Secret
@@ -28,6 +28,12 @@ Note: Change the PROJECT_ID according to usage
 ` kubectl apply -f subnetwork.yaml `
 ## Create GKE Cluster
 ` kubectl apply -f cluster.yaml `
-## ADD Nodepool of Cluster 
+## Create Nodepool for Cluster 
 ` kubectl apply -f nodepool.yaml ` 
 ## Generate kubeconfig file 
+1 . Use the following script to generate kubernetes config file.
+
+2 . Run the generate-kubeconfig.sh script
+
+` ./generate-kubeconfig.sh `
+
