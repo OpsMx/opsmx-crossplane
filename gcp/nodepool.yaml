@@ -13,7 +13,7 @@ spec:
         creation: {{Values.clustername}}  
     config:
       machineType:  {{Values.clustertype}}    #e2-medium  #change if required
-      diskSizeGb: {{Values.clusterdisksize}}   100 #change if required
+      diskSizeGb: {{Values.clusterdisksize}}   #100 #change if required
       diskType: pd-standard #change if required
       imageType: COS_CONTAINERD 
       labels:
