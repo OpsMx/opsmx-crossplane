@@ -1,10 +1,10 @@
 apiVersion: container.gcp.crossplane.io/v1beta2
 kind: Cluster
 metadata:
-  name: crossplane-opsmx-cluster
+  name: {{Values.clustername}}   
   labels:
      service: gke
-     creation: crossplane
+     creation: {{Values.clustername}}   
 spec:
   forProvider:
     addonsConfig:
@@ -13,12 +13,12 @@ spec:
     networkSelector:
        matchLabels:
            service: vpc 
-           creation: crossplane
+           creation:{{Values.vpcname}}   
     subnetworkSelector:
        matchLabels:
            service: subnetwork
-           creation: crossplane
-    location: us-central1-c #change if required
+           creation: {{Values.subnetname}}   
+    location: {{Values.region}}   
     ipAllocationPolicy:
       useIpAliases: true
     masterAuth:
@@ -29,6 +29,6 @@ spec:
     networkPolicy:
       enabled: false
     resourceLabels:
-       owner: crossplane
+       owner: opsmx
   providerConfigRef:
         name: default-gcp
