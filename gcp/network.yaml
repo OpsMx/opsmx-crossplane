@@ -1,14 +1,14 @@
 apiVersion: compute.gcp.crossplane.io/v1beta1
 kind: Network
 metadata:
-  name: crossplane-network
+  name: {{Values.vpcname}}-network
   labels:
      service: vpc
-     creation: crossplane
+     creation: {{Values.vpcname}}-network
 spec:
   forProvider:
     autoCreateSubnetworks: false
-    description: 'This network is created by crossplane'
+    description: 'This network is created by opsmx'
     routingConfig:
       routingMode: REGIONAL
   providerConfigRef:
