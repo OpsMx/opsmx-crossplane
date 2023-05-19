@@ -1,7 +1,7 @@
 apiVersion: container.gcp.crossplane.io/v1beta1
 kind: NodePool
 metadata:
-  name: crossplane-np
+  name: {{Values.clusternodepool}}   
 spec:
   forProvider:
     autoscaling:
@@ -10,15 +10,15 @@ spec:
     clusterSelector:
       matchLabels:
         service: gke
-        creation: crossplane
+        creation: {{Values.clustername}}  
     config:
-      machineType: e2-medium #change if required
-      diskSizeGb: 100 #change if required
+      machineType:  {{Values.clustertype}}    #e2-medium  #change if required
+      diskSizeGb: {{Values.clusterdisksize}}   100 #change if required
       diskType: pd-standard #change if required
       imageType: COS_CONTAINERD 
       labels:
         owner: crossplane
-    initialNodeCount: 2    #change if required
+    initialNodeCount: {{Values.nodecount}}   #change if required
     maxPodsConstraint:
         maxPodsPerNode: 110
     locations:
