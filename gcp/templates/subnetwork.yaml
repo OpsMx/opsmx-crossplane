@@ -1,10 +1,10 @@
 apiVersion: compute.gcp.crossplane.io/v1beta1
 kind: Subnetwork
 metadata:
-  name: {{ .Values.global.name }}-subnet
+  name: {{ .Values.global.name }}-subnetwork
   labels:
      service: subnetwork
-     creation: {{ .Values.global.name }}-subnet
+     creation: {{ .Values.global.name }}-subnetwork
 spec:
   forProvider:
     region: {{ .Values.global.region }}
@@ -13,6 +13,6 @@ spec:
     networkSelector:
       matchLabels:
        service: vpc
-       creation: {{ .Values.global.name }}-subnet
+       creation: {{ .Values.global.name }}-vpcnetwork
   providerConfigRef:
     name: default-gcp
