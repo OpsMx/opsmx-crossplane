@@ -1,10 +1,10 @@
-# generate gcp-credentails.json 
+# generate gcp-credentails.json
 # replace this with your own gcp project id and service account name
 PROJECT_ID=<project_id>
 SA_NAME=<service_account_name>
 
 # create service account
-SA="${SA_NAME}@${PROJECT_ID}.iam.gserviceaccount.com" 
+SA="${SA_NAME}@${PROJECT_ID}.iam.gserviceaccount.com"
 gcloud iam service-accounts create $SA_NAME --project $PROJECT_ID
 
 

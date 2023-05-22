@@ -1,10 +1,10 @@
 apiVersion: compute.gcp.crossplane.io/v1beta1
 kind: Network
 metadata:
-  name: {{Values.vpcname}}-network
+  name: {{ .Values.global.vpcname }}-network
   labels:
      service: vpc
-     creation: {{Values.vpcname}}-network
+     creation: {{ .Values.global.vpcname }}-network
 spec:
   forProvider:
     autoCreateSubnetworks: false

@@ -1,7 +1,7 @@
 #!/bin/bash
 # Authour : OpsMx
 
-SERVICE_ACCOUNT_NAME=opsmx-target   #change required according to usage 
+SERVICE_ACCOUNT_NAME=opsmx-target   #change required according to usage
 NAMESPACE=default                   #change if required
 server=$(kubectl config view --minify --output jsonpath='{.clusters[*].cluster.server}')
 context=$(kubectl config current-context)

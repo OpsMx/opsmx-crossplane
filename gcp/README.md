@@ -3,13 +3,13 @@
 Run the script.
 
 ` ./sa-gcp.sh  `
- 
+
  `
 Note: Change the PROJECT_ID and SA_NAME according to usage
 
 # Create a Provider Secret
 1 .Use the following command to create kubernetes secret from service account JSON file.
-  
+
   ` kubectl create secret generic gcp-creds -n crossplane-system --from-file=creds=./gcp-creds.json `
 
 # Configure the Provider
@@ -28,9 +28,9 @@ Note: Change the PROJECT_ID according to usage
 ` kubectl apply -f subnetwork.yaml `
 ## Create GKE Cluster
 ` kubectl apply -f cluster.yaml `
-## Create Nodepool for Cluster 
-` kubectl apply -f nodepool.yaml ` 
-## Generate kubeconfig file 
+## Create Nodepool for Cluster
+` kubectl apply -f nodepool.yaml `
+## Generate kubeconfig file
 1 . Use the following script to generate kubernetes config file.
 
 2 . Run the generate-kubeconfig.sh script
