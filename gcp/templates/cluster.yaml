@@ -1,10 +1,10 @@
 apiVersion: container.gcp.crossplane.io/v1beta2
 kind: Cluster
 metadata:
-  name: {{ .Values.global.clustername }}
+  name: {{ .Values.global.name }}-cluster
   labels:
      service: gke
-     creation: {{ .Values.global.clustername }}
+     creation: {{ .Values.global.name }}-cluster
 spec:
   forProvider:
     addonsConfig:
@@ -13,11 +13,11 @@ spec:
     networkSelector:
        matchLabels:
            service: vpc
-           creation: {{ .Values.global.vpcname }}
+           creation: {{ .Values.global.name }}-vpcnetwork
     subnetworkSelector:
        matchLabels:
            service: subnetwork
-           creation: {{ .Values.global.subnetname }}
+           creation: {{ .Values.global.name }}-subnetwork
     location: {{ .Values.global.region }}
     ipAllocationPolicy:
       useIpAliases: true
