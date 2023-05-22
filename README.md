@@ -15,5 +15,5 @@ Create namespace.
 ## Install Crossplane CLI using script.
 ```curl -sL https://raw.githubusercontent.com/crossplane/crossplane/master/install.sh | sh```
 ## Install Provider
-## Install GCP provider version 0.22.0 (latest) using crossplane CLI.
+## Install GCP provider version 0.21.0 (latest) using crossplane CLI.
 ```kubectl crossplane install provider crossplane/provider-gcp:v0.21.0```
