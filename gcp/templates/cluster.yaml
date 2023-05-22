@@ -22,14 +22,14 @@ spec:
        matchLabels:
            service: subnetwork
            creation: {{ .Values.global.name }}-subnetwork
-    location: {{ .Values.global.region }}-c
+    location:  - "{{ .Values.global.location }}" 
     ipAllocationPolicy:
       useIpAliases: true
     masterAuth:
       clientCertificateConfig:
         issueClientCertificate: false
     defaultMaxPodsConstraint:
-       maxPodsPerNode: 110
+       maxPodsPerNode: 60
     networkPolicy:
       enabled: false
     resourceLabels:
