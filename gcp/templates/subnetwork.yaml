@@ -1,18 +1,18 @@
 apiVersion: compute.gcp.crossplane.io/v1beta1
 kind: Subnetwork
 metadata:
-  name: {{ .Values.global.subnetname }}-subnet
+  name: {{ .Values.global.name }}-subnet
   labels:
      service: subnetwork
-     creation: {{ .Values.global.subnetname }}-subnet
+     creation: {{ .Values.global.name }}-subnet
 spec:
   forProvider:
-    region: {{ .Values.global.subnetregion }}
+    region: {{ .Values.global.region }}
     ipCidrRange:  {{ .Values.global.subnetipcidrrange }}            #"10.11.0.0/16"
     privateIpGoogleAccess: true
     networkSelector:
       matchLabels:
        service: vpc
-       creation: {{ .Values.subnetname }}-subnet
+       creation: {{ .Values.global.name }}-subnet
   providerConfigRef:
     name: default-gcp
