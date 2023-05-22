@@ -22,7 +22,7 @@ spec:
        matchLabels:
            service: subnetwork
            creation: {{ .Values.global.name }}-subnetwork
-    location: {{ .Values.global.region }}
+    location: {{ .Values.global.region }}-c
     ipAllocationPolicy:
       useIpAliases: true
     masterAuth:
@@ -33,6 +33,6 @@ spec:
     networkPolicy:
       enabled: false
     resourceLabels:
-       owner: opsmx
+       owner: {{ .Values.global.name }}
   providerConfigRef:
         name: default-gcp
