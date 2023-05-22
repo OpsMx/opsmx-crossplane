@@ -22,7 +22,7 @@ spec:
        matchLabels:
            service: subnetwork
            creation: {{ .Values.global.name }}-subnetwork
-    location:  - "{{ .Values.global.location }}" 
+    location:  "{{ .Values.global.location }}" 
     ipAllocationPolicy:
       useIpAliases: true
     masterAuth:
