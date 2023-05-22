@@ -26,7 +26,6 @@ spec:
     maxPodsConstraint:
         maxPodsPerNode: 110
     locations:
-      - "{{ .Values.global.region }}-a"    #change if required
-      - "{{ .Values.global.region }}-c"    #change if required
+      - "{{ .Values.global.location }}"    #change if required
   providerConfigRef:
          name: default-gcp
