@@ -3,8 +3,8 @@ global:
   vpcname: sai
   subnetname: teja
   clustername: opsmx
-  region: us-central
-  subnetipcidrrange: 12.0.5.0/16
+  region: us-central1
+  subnetipcidrrange: 12.0.5.0/24
   nodecount: 2
   clusternodepool: default
   clustertype: e2-standard-8
