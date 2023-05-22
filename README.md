@@ -2,11 +2,8 @@
 # Installing Crossplane
 Create namespace.
 kubectl create namespace crossplane-system
-## Add Helm Chart.
-helm repo add crossplane-stable https://charts.crossplane.io/stable
-helm repo update
 ## Install crossplane using helm.
-helm install crossplane --namespace crossplane-system crossplane-stable/crossplane
+helm install crossplane --namespace crossplane-system gcp/
 ### Check the status.
 helm list -n crossplane-system
 kubectl get all -n crossplane-system
