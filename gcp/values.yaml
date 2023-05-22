@@ -1,10 +1,11 @@
 global:
+  name: apple
   vpcname: sai
   subnetname: teja
   clustername: opsmx
   subnetregion: op1
-  subnetipcidrrange: 10.102.12.34254/5243
+  subnetipcidrrange: 12.0.5.0/16
   nodecount: 2
-  clusternodepool: dsa
-  clustertype: asd
-  clusterdisksize: adSDasd
+  clusternodepool: default
+  clustertype: e2-standard-8
+  clusterdisksize: 100
