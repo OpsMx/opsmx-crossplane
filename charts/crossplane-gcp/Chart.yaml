@@ -1,5 +1,5 @@
 apiVersion: v2
-name: opsmx-crossplane
+name: crossplane-gcp
 description: A Helm chart for creating the cluster in GCP
 version: 1.0.0
 appVersion: "1.0.0"
