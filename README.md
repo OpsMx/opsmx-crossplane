@@ -6,6 +6,7 @@ kubectl create namespace crossplane-system
 git clone https://github.com/OpsMx/opsmx-crossplane.git -b cross-helm
 
     cd opsmx-crossplane
+`helm repo add crossplane-gcp https://opsmx.github.io/opsmx-crossplane/`
 ## Install crossplane using helm.
 `helm install crossplane --namespace crossplane-system gcp/`
 ### Check the status.
