@@ -3,6 +3,18 @@ entries:
   crossplane-gcp:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2023-05-24T08:02:37.148701677Z"
+    description: A Helm chart for creating the cluster in GCP.
+    digest: cd5d245244e29c3a22369ed37b8718c7d5aafa2e1d77485bd3ef149ff99b7b45
+    maintainers:
+    - email: saiteja.katabhatina@opsmx.io
+      name: saitejaopsmx
+    name: crossplane-gcp
+    urls:
+    - https://github.com/OpsMx/opsmx-crossplane/releases/download/crossplane-gcp-1.0.1/crossplane-gcp-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2023-05-23T15:27:18.632929983Z"
     description: A Helm chart for creating the cluster in GCP.
     digest: 84169c38aca64acea4668e8a1220756b3141abef84194b9a7bc3b181c0389517
