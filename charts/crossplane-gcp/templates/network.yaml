@@ -2,9 +2,8 @@ apiVersion: compute.gcp.crossplane.io/v1beta1
 kind: Network
 metadata:
   annotations:
-    "helm.sh/hook": "pre-install"
-    "helm.sh/hook-delete-policy": "before-hook-creation"
-    "helm.sh/hook-weight": "-20"
+    argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/sync-wave: "-20"
   name: {{ .Values.global.name }}-vpcnetwork
   labels:
      service: vpc
