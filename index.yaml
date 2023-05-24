@@ -3,6 +3,18 @@ entries:
   crossplane-gcp:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2023-05-24T08:43:03.543137672Z"
+    description: Helm Chart for creating the cluster in GCP by removing annotations.
+    digest: 1ebebf598135b109d94c6e62875ba2082ac0dba74f3e3620f8cf420071069ac2
+    maintainers:
+    - email: saiteja.katabhatina@opsmx.io
+      name: saitejaopsmx
+    name: crossplane-gcp
+    urls:
+    - https://github.com/OpsMx/opsmx-crossplane/releases/download/crossplane-gcp-1.0.3/crossplane-gcp-1.0.3.tgz
+    version: 1.0.3
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2023-05-24T08:36:32.000985809Z"
     description: Helm Chart for creating the cluster in GCP by adding argocd hooks.
     digest: 3c9e6b381392ef39bff0c62251c41e20f2b3ae169793fa14d875f8fa608a6857
