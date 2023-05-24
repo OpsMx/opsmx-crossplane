@@ -1,9 +1,6 @@
 apiVersion: container.gcp.crossplane.io/v1beta2
 kind: Cluster
 metadata:
-  annotations:
-    argocd.argoproj.io/hook: PreSync
-    argocd.argoproj.io/sync-wave: "-5"
   name: {{ .Values.global.name }}-cluster
   labels:
      service: gke

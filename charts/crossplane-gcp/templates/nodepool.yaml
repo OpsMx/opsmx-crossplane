@@ -1,9 +1,6 @@
 apiVersion: container.gcp.crossplane.io/v1beta1
 kind: NodePool
 metadata:
-  annotations:
-    argocd.argoproj.io/hook: PreSync
-    argocd.argoproj.io/sync-wave: "-1"
   name: {{ .Values.global.name }}-nodepool
 spec:
   forProvider:

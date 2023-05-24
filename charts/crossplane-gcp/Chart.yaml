@@ -1,7 +1,7 @@
 apiVersion: v2
 name: crossplane-gcp
-description: Helm Chart for creating the cluster in GCP by adding argocd hooks.
-version: 1.0.2
+description: Helm Chart for creating the cluster in GCP by removing annotations.
+version: 1.0.3
 appVersion: "1.0.0"
 maintainers:
 - email: saiteja.katabhatina@opsmx.io

@@ -1,9 +1,6 @@
 apiVersion: compute.gcp.crossplane.io/v1beta1
 kind: Network
 metadata:
-  annotations:
-    argocd.argoproj.io/hook: PreSync
-    argocd.argoproj.io/sync-wave: "-20"
   name: {{ .Values.global.name }}-vpcnetwork
   labels:
      service: vpc
