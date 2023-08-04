@@ -10,7 +10,7 @@ spec:
     clusterSelector:
       matchLabels:
         service: gke
-        creation: {{ .Values.global.name }}-cluster
+        creation: {{ .Values.global.name }}
     config:
       machineType:  {{ .Values.global.clustertype }}      #e2-medium  #change if required
       diskSizeGb: {{ .Values.global.clusterdisksize }}    #100 #change if required

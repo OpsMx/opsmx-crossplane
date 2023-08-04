@@ -1,10 +1,10 @@
 apiVersion: container.gcp.crossplane.io/v1beta2
 kind: Cluster
 metadata:
-  name: {{ .Values.global.name }}-cluster
+  name: {{ .Values.global.name }}
   labels:
      service: gke
-     creation: {{ .Values.global.name }}-cluster
+     creation: {{ .Values.global.name }}
 spec:
   forProvider:
     addonsConfig:
